@@ -3,21 +3,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 export default class Layout extends React.Component {
-  constructor() {
-    super();
-    this.state = {name: "Please wait..."};
-  }
-
   render() {
-    setTimeout(
-      () => { this.setState({name: "Hello"}); },
-      1000
-    )
+    const title = "Welcome!";
 
     return (
       <div>
-        <Header />
-        {this.state.name}
+        <Header title={title} />
+        <Header title="Thank you!" />
         <Footer />
       </div>
     )
